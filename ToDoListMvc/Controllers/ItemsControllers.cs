@@ -1,6 +1,10 @@
+using Microsoft.AspNetCore.Mvc;
+using ToDoListMvc.Models;
+using System.Collections.Generic;
+
 namespace ToDoListMvc.Controllers
 {
-  public class ItemControllers : Controller
+  public class ItemsController : Controller
   {
     [HttpGet("/items")]
     public ActionResult Index()
