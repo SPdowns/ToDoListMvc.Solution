@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using ToDoList.Models;
+using ToDoListMvc.Models;
 using System;
 
 namespace ToDoListMvc.Tests
