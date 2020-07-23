@@ -16,5 +16,15 @@ namespace ToDoListMvc.Models
       Id = _instances.Count;
       Items = new List<Item>{};
     }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
+    public static List<Category> GetAll()
+    {
+      return _instances;
+    }
   }
 }

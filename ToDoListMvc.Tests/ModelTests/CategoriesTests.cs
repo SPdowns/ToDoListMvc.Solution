@@ -6,8 +6,14 @@ using System;
 namespace ToDoListMvc.Tests
 {
   [TestClass]
-  public class CategoryTest
+  public class CategoryTest : IDisposable
   {
+
+    public void Dispose()
+    {
+      Category.ClearAll();
+    }
+
     [TestMethod]
     public void CategoryConstructor_CreatesInstanceOfCategory_Category()
     {
@@ -30,7 +36,19 @@ namespace ToDoListMvc.Tests
       string name = "Test Category";
       Category newCategory = new Category(name);
       int result = newCategory.Id;
-      Assert.AreEqual(3, result);
+      Assert.AreEqual(1, result);
     }
+
+      [TestMethod]
+  public void GetAll_ReturnsAllCategoryObjects_CategoryList()
+  {
+    string name01 = "Work";
+    string name02 = "School";
+    Category newCategory1 = new Category(name01);
+    Category newCategory2 = new Category(name02);
+    List<Category> newList = new List<Category> { newCategory1 };
+    List<Category> result = new List<Category> { newCategory2 };
+    CollectionAssert.AreEqual(newList, result);
+  }
   }
 }
