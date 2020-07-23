@@ -30,7 +30,7 @@ namespace ToDoListMvc.Tests
       string name = "Test Category";
       Category newCategory = new Category(name);
       int result = newCategory.Id;
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(3, result);
     }
   }
 }
