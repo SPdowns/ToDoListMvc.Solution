@@ -18,7 +18,7 @@ namespace ToDoListMvc.Controllers
     }
 
     [HttpGet("/items/new")]
-    public ActionResult CreateForm()
+    public ActionResult Show()
     {
       return View();
     }
